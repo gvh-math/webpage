@@ -262,7 +262,7 @@ p. ul con-números {
 .image-container {
     display: grid;
     grid-template-areas: 
-        "img1 img1"
+        "img6 img1"
         "img2 img3"
         "img4 img5";
     grid-template-columns: 1fr 1fr; 
@@ -280,12 +280,12 @@ p. ul con-números {
 }
 
 /* Asegura que las áreas se asignen correctamente */
+.img6{
+    grid-area: img6;
+}
+
 .img1 {
     grid-area: img1;
-    align-self: center;
-    justify-self: center;
-    width: 50%;
-    height: auto;
 }
 
 .img2 {
@@ -303,4 +303,3 @@ p. ul con-números {
 .img5 {
     grid-area: img5;
 }
-
