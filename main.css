@@ -220,7 +220,7 @@ p. ul con-viñetas {
     align-items: flex-start;
     padding: 0;
     margin-top: 0;
-    gap: 100px; /* Espacio controlado entre elementos */
+    gap: 120px; /* Espacio controlado entre elementos */
 }
 
 .texto {
