@@ -281,10 +281,6 @@ p. ul con-números {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
 }
 
-.img9 img {
-    height: 200px; /* Mismo tamaño que las demás */
-}
-
 /* Asegura que las áreas se asignen correctamente */
 .img9{
     grid-area: img9;
