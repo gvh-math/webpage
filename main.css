@@ -97,7 +97,7 @@ h2 {
     padding-top: 10;
     font-family: sans-serif;
     color: rgb(80, 71, 132);
-    font font-size: 37;
+    font-size: 37; 
     margin-top: 35;
     margin-bottom: 30;
 }
@@ -221,7 +221,7 @@ p. ul con-viñetas {
     align-items: flex-start;
     padding: 0;
     margin-top: 0;
-    gap: 20; /* Reducir el espacio entre texto e imagen */
+    gap: 100; /* Reducir el espacio entre texto e imagen */
 }
 
 
