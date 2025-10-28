@@ -217,13 +217,12 @@ p. ul con-viñetas {
     
 .container {
     display: flex;              
-    justify-content: center;  
+    justify-content: center;  /* Centrar horizontalmente */
     align-items: flex-start;
     padding: 0;
     margin-top: 0;
-    gap: 100; /* Reducir el espacio entre texto e imagen */
+    gap: 40px; /* Espacio controlado entre elementos */
 }
-
 
 .texto {
     flex: 0 1 auto; /* No expandir, tamaño según contenido */
@@ -233,10 +232,10 @@ p. ul con-viñetas {
 
 .imagen img {
     max-width: 310px;       
-    max-height: 420;  
+    max-height: 420px;  
     padding-bottom: 0;
     padding-top: 0;
-    box-shadow: 5 5 10 rgba(0, 0, 0, 0.5);   
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
 }
 
 .blue {
