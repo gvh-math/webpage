@@ -280,6 +280,18 @@ p. ul con-números {
 }
 
 /* Asegura que las áreas se asignen correctamente */
+.img9{
+    grid-area: img9;
+}
+
+.img8{
+    grid-area: img8;
+}
+
+.img7{
+    grid-area: img7;
+} 
+
 .img6{
     grid-area: img6;
 }
