@@ -262,6 +262,8 @@ p. ul con-números {
 .image-container {
     display: grid;
     grid-template-areas: 
+        "img9"
+        "img7 img8"
         "img6 img1"
         "img2 img3"
         "img4 img5";
