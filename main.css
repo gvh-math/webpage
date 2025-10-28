@@ -226,7 +226,6 @@ p. ul con-viñetas {
 
 
 .texto {
-   .texto {
     flex: 0 1 auto; /* No expandir, tamaño según contenido */
     color: rgb(104, 96, 150);
     text-align: left;
