@@ -79,7 +79,7 @@ h1 {
     padding-top: 120;
     text-align: center;
     font-family: sans-serif;
-    font-size: 60;
+    font-size: 50;
     color: rgba(11, 4, 108, 0.86);
     font-style: inherit;
     margin-top: 30;
@@ -97,7 +97,7 @@ h2 {
     padding-top: 10;
     font-family: sans-serif;
     color: rgb(80, 71, 132);
-    font-size: 35; 
+    font-size: 30; 
     margin-top: 35;
     margin-bottom: 20;
 }
