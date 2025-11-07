@@ -226,7 +226,7 @@ p. ul con-viñetas {
     color: rgb(104, 96, 150);
 }
     
-/* SOLO EL CONTENEDOR DE THESIS MODIFICADO */
+/* CONTENEDOR DE THESIS - IMAGEN A LA IZQUIERDA EN DESKTOP */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -237,10 +237,12 @@ p. ul con-viñetas {
     gap: 120px;
 }
 
-.texto {
-    flex: 0 1 auto;
-    color: rgb(104, 96, 150);
-    text-align: left;
+/* IMAGEN A LA IZQUIERDA - TEXTO A LA DERECHA */
+.imagen {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    order: 1; /* IMAGEN PRIMERO (IZQUIERDA) */
 }
 
 .imagen img {
@@ -249,6 +251,13 @@ p. ul con-viñetas {
     padding-bottom: 0;
     padding-top: 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
+}
+
+.texto {
+    flex: 0 1 auto;
+    color: rgb(104, 96, 150);
+    text-align: left;
+    order: 2; /* TEXTO DESPUÉS (DERECHA) */
 }
 
 .blue {
@@ -365,7 +374,7 @@ p. ul con-números {
     }
 }
 
-/* THESIS RESPONSIVO */
+/* THESIS RESPONSIVO - SOLO CUANDO SE ACHICA */
 @media (max-width: 960px) {
     .container {
         flex-direction: column;
@@ -374,14 +383,14 @@ p. ul con-números {
     }
     
     .imagen {
-        order: 1;
+        order: 1; /* IMAGEN ARRIBA */
         width: 100%;
         display: flex;
         justify-content: center;
     }
     
     .texto {
-        order: 2;
+        order: 2; /* TEXTO ABAJO */
         width: 100%;
     }
     
