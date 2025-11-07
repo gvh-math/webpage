@@ -21,9 +21,11 @@ body {
     background-position: center; 
     background-attachment: fixed;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
-/* NAVBAR MEJORADA - RESPONSIVA CON DOS FILAS */
+/* NAVBAR MEJORADA - DOS FILAS EQUILIBRADAS */
 .navbar {
     position: fixed;
     background-color: rgba(11, 4, 108, 0.92); 
@@ -31,11 +33,11 @@ body {
     left: 0;
     width: 100%;
     z-index: 100;
-    height: auto; /* Altura automática */
+    height: auto;
     min-height: 70px;
     display: flex;
     align-items: center;
-    padding: 10px 0;
+    padding: 0;
 }
 
 .navbar nav {
@@ -49,19 +51,19 @@ body {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    flex-wrap: wrap; /* Permite que se rompa en varias líneas */
-    gap: 5px;
+    flex-wrap: nowrap;
+    gap: 0;
 }
 
 .navbar li {
     margin: 0;
     flex: 1;
-    min-width: 120px; /* Ancho mínimo para cada item */
+    min-width: 0;
 }
 
 .navbar a { 
     cursor: pointer; 
-    padding: 10px 8px;
+    padding: 15px 8px;
     display: block;
     color: rgba(227, 226, 245, 0.97);
     border-radius: 2px;
@@ -70,7 +72,7 @@ body {
     text-align: center; 
     transition: all 0.3s ease;
     white-space: nowrap;
-    margin: 2px;
+    margin: 0 2px;
 }
 
 .navbar ul li a:hover { 
@@ -83,6 +85,7 @@ body {
     margin: 100px auto 50px;
     max-width: 1400px;
     padding: 0 20px;
+    flex: 1; /* Ocupa el espacio disponible */
 }
 
 .principal-title {
@@ -309,31 +312,38 @@ ol {
     height: auto;
 }
 
-/* BLOQUE GRIS ORIGINAL - USEFUL LINKS */
+/* BLOQUE GRIS ORIGINAL COMPACTO - USEFUL LINKS */
 .gray-block {
     background-color: rgba(240, 240, 245, 0.8);
-    margin: 40px 220px 50px 220px;
-    padding: 20px;
+    margin: 40px 220px 20px 220px; /* Márgenes laterales grandes, margen superior reducido */
+    padding: 15px 20px;
+    border-radius: 5px;
 }
 
 .columns {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .columns div {
-    margin-bottom: 10px;
-    padding: 5px 0;
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 5px;
 }
 
 .columns li {
     list-style-type: none;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .columns a {
     color: rgb(80, 71, 132);
     text-decoration: none;
     transition: color 0.3s;
+    font-size: 14px;
 }
 
 .columns a:hover {
@@ -360,38 +370,53 @@ ul.color p {
     padding-top: 5px;
 }
 
-/* MEDIA QUERIES PARA NAVBAR RESPONSIVA */
-
-/* Para cuando la ventana se achica al 50% (960px) */
+/* MEDIA QUERY PARA CUANDO SE ACHICA LA VENTANA - DOS FILAS PERFECTAS */
 @media (max-width: 960px) {
+    /* NAVBAR - DOS FILAS EQUILIBRADAS (3 + 3) */
     .navbar {
-        min-height: 80px; /* Más alta para dos líneas */
-        padding: 8px 0;
+        min-height: 120px;
+        padding: 5px 0;
+    }
+    
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 0;
     }
     
     .navbar li {
-        flex: 0 0 calc(33.333% - 10px); /* 3 items por línea */
+        flex: 0 0 33.333%;
         min-width: 0;
     }
     
     .navbar a {
         font-size: 14px;
-        padding: 8px 6px;
+        padding: 12px 4px;
+        margin: 2px;
     }
     
     /* CONTENIDO PRINCIPAL */
     .contenido {
-        margin: 100px 20px 40px;
+        margin: 120px 20px 40px;
         padding: 0 15px;
     }
     
     .principal-title {
-        margin-top: 100px;
+        margin-top: 120px;
     }
     
-    /* BLOQUE GRIS */
+    /* BLOQUE GRIS - MÁRGENES RESPONSIVOS */
     .gray-block {
-        margin: 40px 20px 50px 20px;
+        margin: 40px 20px 20px 20px;
+        padding: 12px 15px;
+    }
+    
+    .columns {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .columns div {
+        min-width: 100%;
     }
     
     /* SECCIONES IMAGEN+TEXTO */
@@ -417,65 +442,69 @@ ul.color p {
     }
 }
 
-/* Para tablets (768px) */
+/* Para tablets más pequeñas (768px) */
 @media (max-width: 768px) {
     .navbar {
-        min-height: 80px;
-        padding: 5px 0;
-    }
-    
-    .navbar li {
-        flex: 0 0 calc(33.333% - 8px); /* 3 items por línea */
+        min-height: 110px;
     }
     
     .navbar a {
         font-size: 13px;
-        padding: 7px 4px;
+        padding: 10px 3px;
     }
     
     .contenido {
-        margin-top: 90px;
+        margin-top: 110px;
     }
     
     .principal-title {
-        margin-top: 90px;
+        margin-top: 110px;
     }
     
     .gray-block {
-        margin: 40px 15px 50px 15px;
-        padding: 15px;
+        margin: 40px 15px 20px 15px;
+        padding: 10px 12px;
     }
 }
 
-/* Para móviles (600px) - 2 items por línea */
+/* Para móviles (600px) */
 @media (max-width: 600px) {
     .navbar {
-        min-height: 100px; /* Más alta para 3 líneas */
+        min-height: 100px;
     }
     
     .navbar li {
-        flex: 0 0 calc(50% - 10px); /* 2 items por línea */
+        flex: 0 0 33.333%;
     }
     
     .navbar a {
         font-size: 12px;
-        padding: 6px 3px;
+        padding: 8px 2px;
+    }
+    
+    .contenido {
+        margin-top: 100px;
+    }
+    
+    .principal-title {
+        margin-top: 100px;
+    }
+    
+    .gray-block {
+        margin: 40px 10px 20px 10px;
+        padding: 8px 10px;
     }
 }
 
 /* Para móviles pequeños (480px) */
 @media (max-width: 480px) {
     .navbar {
-        min-height: 120px; /* Más alta para 3 líneas */
-    }
-    
-    .navbar li {
-        flex: 0 0 calc(50% - 5px); /* 2 items por línea más compactos */
+        min-height: 90px;
     }
     
     .navbar a {
         font-size: 11px;
-        padding: 5px 2px;
+        padding: 6px 1px;
     }
     
     .photo img, .imagen img {
@@ -484,23 +513,19 @@ ul.color p {
     }
     
     .gray-block {
-        margin: 40px 10px 50px 10px;
-        padding: 10px;
+        margin: 40px 8px 20px 8px;
+        padding: 6px 8px;
     }
 }
 
 /* Para móviles muy pequeños (360px) */
 @media (max-width: 360px) {
     .navbar {
-        min-height: 140px; /* Suficiente alto para 3 líneas */
-    }
-    
-    .navbar li {
-        flex: 0 0 calc(50% - 4px); /* 2 items por línea muy compactos */
+        min-height: 80px;
     }
     
     .navbar a {
         font-size: 10px;
-        padding: 4px 1px;
+        padding: 5px 1px;
     }
 }
