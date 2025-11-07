@@ -229,10 +229,11 @@ p. ul con-viñetas {
 /* CONTENEDOR DE THESIS - EXACTAMENTE COMO TU ORIGINAL */
 .container {
     display: flex;              
-    justify-content: space-between;  /* COMO TU ORIGINAL */
-    align-items: center;
+    justify-content: center;  /* COMO TU ORIGINAL */
+    align-items: flex-start;
     padding: 0;
     margin-top: 0;
+    gap: 120px; /* Espacio controlado entre elementos */
 }
 
 /* TEXTO A LA IZQUIERDA - COMO TU ORIGINAL */
