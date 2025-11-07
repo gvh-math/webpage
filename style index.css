@@ -75,7 +75,7 @@ body {
 /* CONTENIDO PRINCIPAL */
 .contenido {
     margin: 100px auto 50px;
-    max-width: 1200px;
+    max-width: 1400px; /* Más ancho para pantallas grandes */
     padding: 0 20px;
 }
 
@@ -219,7 +219,7 @@ ol {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 60px;
+    gap: 80px; /* Más espacio en desktop */
     margin: 40px 0;
 }
 
@@ -250,7 +250,7 @@ ol {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 60px;
+    gap: 80px; /* Más espacio en desktop */
     margin: 30px 0;
 }
 
@@ -332,30 +332,31 @@ ol {
     text-decoration: underline;
 }
 
-/* MEDIA QUERIES - PARA CUANDO SE ACHICA LA VENTANA */
-@media (max-width: 768px) {
+/* MEDIA QUERY PARA CUANDO SE ACHICA AL 50% EN COMPUTADORA */
+/* Punto de quiebre: 960px (50% de una pantalla full HD 1920px) */
+@media (max-width: 960px) {
     .contenido {
-        margin: 80px 15px 30px;
+        margin: 90px 20px 40px;
         padding: 0 15px;
     }
     
     .principal-title {
-        margin-top: 80px;
+        margin-top: 90px;
     }
     
     .navbar {
-        height: 60px;
+        height: 65px;
     }
     
     .navbar a {
-        font-size: 14px;
-        padding: 8px 10px;
+        font-size: 16px;
+        padding: 8px 12px;
     }
     
     /* SECCIONES QUE SE APILAN VERTICALMENTE - IMAGEN ARRIBA, TEXTO ABAJO */
     .comienzo, .container {
         flex-direction: column;
-        gap: 30px;
+        gap: 35px;
         align-items: center;
     }
     
@@ -374,12 +375,8 @@ ol {
     }
     
     .photo img, .imagen img {
-        max-width: 280px;
-        max-height: 350px;
-    }
-    
-    p, ul.con-viñetas {
-        text-align: left;
+        max-width: 300px;
+        max-height: 380px;
     }
     
     .image-container {
@@ -387,7 +384,7 @@ ol {
     }
     
     .img9 {
-        max-width: 300px;
+        max-width: 350px;
     }
     
     .columns {
@@ -395,6 +392,7 @@ ol {
     }
 }
 
+/* MEDIA QUERY PARA MÓVILES MÁS PEQUEÑOS */
 @media (max-width: 480px) {
     .navbar ul {
         justify-content: space-around;
