@@ -1,6 +1,8 @@
 * { 
     padding: 0;
     margin: 0; 
+    background-position: center;
+    background-size: cover;
     box-sizing: border-box;
 }
 
@@ -9,21 +11,21 @@ html {
     padding: 0;
     height: 100%;
     width: 100%;
+    background-size: cover;
 }
 
 body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
+    height: 100%;
     background-image: url(fondos%2003.png);
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed;
-    font-family: sans-serif;
 }
 
-/* NAVBAR IDÉNTICA A INDEX.HTML */
+/* SOLO NAVBAR MODIFICADA - RESPONSIVA */
 .navbar {
     position: fixed;
     background-color: rgba(11, 4, 108, 0.92); 
@@ -65,6 +67,7 @@ body {
     display: block;
     color: rgba(227, 226, 245, 0.97);
     border-radius: 2px;
+    font-family: sans-serif;
     font-size: 16px;
     text-decoration: none;
     text-align: center; 
@@ -73,107 +76,118 @@ body {
     margin: 0 2px;
 }
 
+ul.no-viñetas {
+    list-style-type: none; 
+}
+
 .navbar ul li a:hover { 
+    text-decoration: none;
     background-color: rgba(99, 92, 180, 0.86);
-    transform: translateY(-2px);
 }
 
-/* CONTENIDO PRINCIPAL - MISMOS MÁRGENES QUE INDEX */
-.contenido {
-    margin: 100px 220px 50px 220px;
-    padding: 0;
-}
+/* MANTENIENDO TODOS TUS ESTILOS ORIGINALES... */
 
-/* TÍTULOS CON CLAMP COMO EN INDEX */
 h1 {
-    padding-top: 40px;
+    padding-top: 120;
     text-align: center;
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-family: sans-serif;
+    font-size: 50;
     color: rgba(11, 4, 108, 0.86);
-    margin: 30px 0 20px;
+    font-style: inherit;
+    margin-top: 30;
+    margin-bottom: 20;
+}
+
+.contenido {
+    margin-left: 220;
+    margin-right: 220;
+    margin-top: 46;
+    margin-bottom: 50px;
 }
 
 h2 {
-    padding-top: 10px;
+    padding-top: 10;
+    font-family: sans-serif;
     color: rgb(80, 71, 132);
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    margin: 35px 0 20px;
+    font-size: 30; 
+    margin-top: 35;
+    margin-bottom: 20;
 }
 
 h3 {
+    font-family: sans-serif;
     color: rgb(104, 96, 150);
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
-    margin: 25px 0 13px;
+    font-size: 20;
+    padding-top: 8; 
+    margin-bottom: 13;
+    margin-top: 25;
 }
 
 h4 {
     color: rgb(104, 96, 150);
-    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
-    margin: 35px 0 12px;
+    font-family: sans-serif;
+    font-size: 18;
+    margin-bottom: 12;
+    margin-top: 35;
 }
 
 h5 {
     color: rgba(11, 4, 108, 0.86);
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    margin: 30px 0;
+    font-family: sans-serif;
+    font-size: 30;
+    margin-bottom: 30;
+    margin-top: 0;
     text-align: center;
 }
 
 h6 {
-    color: rgb(104, 96, 150);
-    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
-    margin: 30px 0;
-    text-align: center;
+   color: rgb(104, 96, 150);
+    font-family: sans-serif;
+    font-size: 30;
+    margin-bottom: 30;
+    margin-top: 30;
+    text-align: left; 
 }
 
-/* PÁRRAFOS Y TEXTO - IGUAL QUE INDEX */
 p { 
     color: #1a1a33;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    margin: 15px 0 24px;
+    font-family: sans-serif;
+    font-size: 16;
+    margin-bottom: 24;
+    margin-top: 15;
     line-height: 1.6;
     text-align: justify;
 }
 
 a {
     color: rgb(104, 96, 150);
-    text-decoration: none;
-    transition: color 0.3s;
 }
 
-a:hover {
-    color: rgba(11, 4, 108, 0.86);
-    text-decoration: underline;
-}
-
-/* LISTAS - MANTENIENDO TU ESTILO ORIGINAL PERO RESPONSIVO */
-ul.con-viñetas {
+ ul.con-viñetas {
     list-style-type: square;  
-    margin-bottom: 18px;
+    margin-bottom: 18;
     line-height: 1.6;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: sans-serif;
+    font-size: 16;
     text-align: justify;
-    padding-left: 25px;
-}
-
-ul.con-viñetas li {
-    margin-bottom: 15px;
-    color: #1a1a33;
+    padding-left: 25;
 }
 
 ul.color {
     list-style-type: square;  
-    margin-bottom: 18px;
+    margin-bottom: 18;
     line-height: 1.6;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: sans-serif;
+    font-size: 16;
     text-align: justify;
-    padding-left: 25px;
+    padding-left: 25; 
 }
 
 ul.color li strong {
-    margin-bottom: 1.8px;
+    margin-bottom: 1.8;
+    font-family: sans-serif;
     line-height: 1.8;
-    padding-top: 20px;
+    padding-top: 20;
     color: rgb(104, 96, 150);
 }
 
@@ -181,95 +195,154 @@ ul.color i {
     color: rgb(104, 96, 150);
 }
 
-ol {
-    list-style-type: decimal;
-    margin-bottom: 15px;
-    line-height: 1.8; 
-    color: rgb(104, 96, 150);
-    padding-left: 25px;
+ul. color p {
+    margin-bottom: 1.8;
+    font-family: sans-serif;
+    font-size: 16;
+    line-height: 1.8;
+    padding-left: 25;
+    padding-top: 5;   
 }
 
-/* CLASES ESPECIALES */
-.highlight {
+ol {
+    list-style-type:decimal;
+    margin-bottom: 15;
+    font-family: sans-serif;
+    line-height: 1.8; 
+    color: rgb(104, 96, 150);
+}
+
+p. ul con-viñetas {
+    margin-bottom: 1.8;
+    font-family: sans-serif;
+    font-size: 16;
+    line-height: 1.8;
+    padding-left: 25;
+    padding-top: 20;
+}
+
+.highlight{
     font-weight: bold;
     color: rgb(104, 96, 150);
 }
-
-.blue {
-    line-height: 1.6;
-    color: rgb(104, 96, 150);
-    padding-left: 20px;  
-    text-align: justify;
-}
-
-/* CONTENEDOR THESIS - EXACTAMENTE COMO LOS CONTENEDORES DE INDEX */
+    
+/* SOLO EL CONTENEDOR DE THESIS MODIFICADO */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 80px;
-    margin: 30px 0;
-}
-
-.imagen {
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: center;
-    order: 1;
-}
-
-.imagen img {
-    max-width: 330px;
-    width: 100%;
-    height: auto;
-    max-height: 440px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+    padding: 0;
+    margin-top: 0;
+    gap: 120px;
 }
 
 .texto {
-    flex: 1 1 500px;
-    min-width: 300px;
-    order: 2;
+    flex: 0 1 auto;
     color: rgb(104, 96, 150);
     text-align: left;
 }
 
-/* LISTA NUMERADA DE PUBLICACIONES */
-ul.con-números { 
-    padding-left: 25px;
-    margin-top: 20px;
+.imagen img {
+    max-width: 330px;       
+    max-height: 440px;  
+    padding-bottom: 0;
+    padding-top: 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
 }
 
-ul.con-números ol {
-    list-style-type: decimal;
-    margin-bottom: 15px;
-    line-height: 1.8; 
+.blue {
+    font-family: sans-serif;
+    line-height: 1.6;
     color: rgb(104, 96, 150);
-    padding-left: 25px;
+    padding-left: 20;  
+    text-align: justify;
 }
 
-ul.con-números ol li {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(104, 96, 150, 0.2);
+ul.con-números { 
+    padding-left: 25;
+    margin-top: 20
 }
 
-ul.con-números ol li:last-child {
-    border-bottom: none;
+p. ul con-números {
+    margin-bottom: 15;
 }
 
-/* CLASES ADICIONALES PARA COMPATIBILIDAD */
-ul.no-viñetas {
-    list-style-type: none;
+.lista-inversa {
+  color: #2b2b2b;
+  text-align: justify;
 }
 
-/* MEDIA QUERIES - EXACTAMENTE IGUALES A INDEX.HTML */
+/* MANTENIENDO TU GRID DE IMÁGENES ORIGINAL SIN CAMBIOS */
+.image-container {
+    display: grid;
+    grid-template-areas:  
+        "img9 img9"
+        "img7 img8"
+        "img6 img1"
+        "img2 img3"
+        "img4 img5";
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
 
-/* CUANDO SE ACHICA AL 50% (960px) */
+.image-container img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+}
+
+/* confg. para imagen sola alineada al centro*/
+.img9 {
+    grid-area: img9;
+    width: 50%;
+    justify-self: center;
+}
+
+/* Asegura que las áreas se asignen correctamente */
+.img9 {
+    grid-area: img9;
+}
+.img8 {
+    grid-area: img8;
+}
+
+.img7 {
+    grid-area: img7;
+} 
+
+.img6 {
+    grid-area: img6;
+}
+
+.img1 {
+    grid-area: img1;
+}
+
+.img2 {
+    grid-area: img2;
+}
+
+.img3 {
+    grid-area: img3;
+}
+
+.img4 {
+    grid-area: img4;
+}
+
+.img5 {
+    grid-area: img5;
+}
+
+/* SOLO MEDIA QUERIES PARA LOS CAMBIOS ESPECÍFICOS */
+
+/* NAVBAR RESPONSIVA */
 @media (max-width: 960px) {
-    /* NAVBAR - DOS FILAS EQUILIBRADAS (3 + 3) */
     .navbar {
         min-height: 120px;
         padding: 5px 0;
@@ -290,14 +363,10 @@ ul.no-viñetas {
         padding: 12px 4px;
         margin: 2px;
     }
-    
-    /* CONTENIDO PRINCIPAL */
-    .contenido {
-        margin: 120px 20px 40px;
-        padding: 0 15px;
-    }
-    
-    /* CONTENEDOR THESIS - IMAGEN ARRIBA, TEXTO ABAJO (IGUAL QUE INDEX) */
+}
+
+/* THESIS RESPONSIVO */
+@media (max-width: 960px) {
     .container {
         flex-direction: column;
         gap: 35px;
@@ -314,7 +383,6 @@ ul.no-viñetas {
     .texto {
         order: 2;
         width: 100%;
-        text-align: left;
     }
     
     .imagen img {
@@ -323,7 +391,7 @@ ul.no-viñetas {
     }
 }
 
-/* TABLETS (768px) */
+/* AJUSTES ADICIONALES PARA NAVBAR EN PANTALLAS MÁS PEQUEÑAS */
 @media (max-width: 768px) {
     .navbar {
         min-height: 110px;
@@ -333,43 +401,19 @@ ul.no-viñetas {
         font-size: 13px;
         padding: 10px 3px;
     }
-    
-    .contenido {
-        margin-top: 110px;
-    }
-    
-    .imagen img {
-        max-width: 280px;
-        max-height: 350px;
-    }
 }
 
-/* MÓVILES (600px) */
 @media (max-width: 600px) {
     .navbar {
         min-height: 100px;
-    }
-    
-    .navbar li {
-        flex: 0 0 33.333%;
     }
     
     .navbar a {
         font-size: 12px;
         padding: 8px 2px;
     }
-    
-    .contenido {
-        margin-top: 100px;
-    }
-    
-    .imagen img {
-        max-width: 250px;
-        max-height: 320px;
-    }
 }
 
-/* MÓVILES PEQUEÑOS (480px) */
 @media (max-width: 480px) {
     .navbar {
         min-height: 90px;
@@ -379,27 +423,8 @@ ul.no-viñetas {
         font-size: 11px;
         padding: 6px 1px;
     }
-    
-    .contenido {
-        margin: 90px 15px 30px;
-    }
-    
-    .imagen img {
-        max-width: 220px;
-        max-height: 280px;
-    }
-    
-    h1 {
-        font-size: 28px;
-        padding-top: 20px;
-    }
-    
-    h2 {
-        font-size: 22px;
-    }
 }
 
-/* MÓVILES MUY PEQUEÑOS (360px) */
 @media (max-width: 360px) {
     .navbar {
         min-height: 80px;
@@ -408,14 +433,5 @@ ul.no-viñetas {
     .navbar a {
         font-size: 10px;
         padding: 5px 1px;
-    }
-    
-    .contenido {
-        margin: 80px 10px 20px;
-    }
-    
-    .imagen img {
-        max-width: 200px;
-        max-height: 250px;
     }
 }
