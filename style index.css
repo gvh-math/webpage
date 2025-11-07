@@ -23,7 +23,7 @@ body {
     font-family: sans-serif;
 }
 
-/* NAVBAR MEJORADA Y COMPLETAMENTE RESPONSIVA */
+/* NAVBAR MEJORADA - UNA SOLA LÍNEA HORIZONTAL */
 .navbar {
     position: fixed;
     background-color: rgba(11, 4, 108, 0.92); 
@@ -31,11 +31,10 @@ body {
     left: 0;
     width: 100%;
     z-index: 100;
-    height: auto;
-    min-height: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
-    padding: 10px 0;
+    padding: 0;
 }
 
 .navbar nav {
@@ -49,19 +48,19 @@ body {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    flex-wrap: wrap;
-    gap: 5px;
+    flex-wrap: nowrap; /* IMPORTANTE: evita que se rompa en varias líneas */
+    gap: 0;
 }
 
 .navbar li {
     margin: 0;
     flex: 1;
-    min-width: fit-content;
+    min-width: 0;
 }
 
 .navbar a { 
     cursor: pointer; 
-    padding: 8px 12px;
+    padding: 12px 8px;
     display: block;
     color: rgba(227, 226, 245, 0.97);
     border-radius: 2px;
@@ -70,7 +69,7 @@ body {
     text-align: center; 
     transition: all 0.3s ease;
     white-space: nowrap;
-    margin: 2px;
+    margin: 0 2px;
 }
 
 .navbar ul li a:hover { 
@@ -359,19 +358,14 @@ ul.color p {
 
 /* MEDIA QUERY PARA CUANDO SE ACHICA AL 50% EN COMPUTADORA (960px) */
 @media (max-width: 960px) {
-    /* NAVBAR */
+    /* NAVBAR - MANTIENE UNA SOLA LÍNEA */
     .navbar {
-        min-height: 60px;
-        padding: 8px 0;
+        height: 60px;
     }
     
     .navbar a {
         font-size: 14px;
-        padding: 6px 10px;
-    }
-    
-    .navbar ul {
-        gap: 3px;
+        padding: 10px 6px;
     }
     
     /* CONTENIDO PRINCIPAL */
@@ -423,23 +417,16 @@ ul.color p {
     }
 }
 
-/* MEDIA QUERY PARA TABLETS Y PANTALLAS MÁS PEQUEÑAS (768px) */
+/* MEDIA QUERY PARA TABLETS (768px) */
 @media (max-width: 768px) {
-    /* NAVBAR */
+    /* NAVBAR - MANTIENE UNA SOLA LÍNEA */
     .navbar {
-        min-height: 55px;
-        padding: 5px 0;
-    }
-    
-    .navbar ul {
-        justify-content: space-around;
-        gap: 2px;
+        height: 55px;
     }
     
     .navbar a {
         font-size: 13px;
-        padding: 5px 8px;
-        margin: 1px;
+        padding: 8px 4px;
     }
     
     /* CONTENIDO */
@@ -465,23 +452,26 @@ ul.color p {
     }
 }
 
-/* MEDIA QUERY PARA MÓVILES PEQUEÑOS (480px) */
+/* MEDIA QUERY PARA MÓVILES (480px) - NAVBAR COMPACTA */
 @media (max-width: 480px) {
-    /* NAVBAR */
+    /* NAVBAR - UNA SOLA LÍNEA COMPACTA */
     .navbar {
-        min-height: 50px;
-        padding: 3px 0;
-    }
-    
-    .navbar ul {
-        justify-content: space-between;
-        padding: 0 5px;
+        height: 50px;
     }
     
     .navbar a {
         font-size: 11px;
-        padding: 4px 6px;
-        margin: 1px;
+        padding: 6px 3px;
+        margin: 0 1px;
+    }
+    
+    /* Asegurar que todos los textos quepan en una línea */
+    .navbar a[href="academic%20services.html"] {
+        font-size: 10px;
+    }
+    
+    .navbar a[href="communications.html"] {
+        font-size: 10px;
     }
     
     /* CONTENIDO */
@@ -506,25 +496,36 @@ ul.color p {
 
 /* MEDIA QUERY PARA MÓVILES MUY PEQUEÑOS (360px) */
 @media (max-width: 360px) {
+    /* NAVBAR - TEXTS MÁS COMPACTOS */
+    .navbar {
+        height: 45px;
+    }
+    
     .navbar a {
-        font-size: 10px;
-        padding: 3px 4px;
+        font-size: 9px;
+        padding: 5px 2px;
     }
     
-    .navbar ul {
-        gap: 1px;
+    /* Textos abreviados para que quepan en una línea */
+    .navbar a[href="research.html"]::after {
+        content: "Research";
+        font-size: 9px;
     }
     
-    /* Textos abreviados para navbar en móviles muy pequeños */
-    .navbar a[href="research.html"] b {
-        font-size: 10px;
+    .navbar a[href="academic%20services.html"]::after {
+        content: "Services";
+        font-size: 9px;
     }
     
-    .navbar a[href="academic%20services.html"] b {
-        font-size: 10px;
+    .navbar a[href="communications.html"]::after {
+        content: "Comm.";
+        font-size: 9px;
     }
     
+    /* Ocultar textos originales muy largos */
+    .navbar a[href="research.html"] b,
+    .navbar a[href="academic%20services.html"] b,
     .navbar a[href="communications.html"] b {
-        font-size: 10px;
+        display: none;
     }
 }
