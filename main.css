@@ -226,23 +226,29 @@ p. ul con-viñetas {
     color: rgb(104, 96, 150);
 }
     
-/* CONTENEDOR DE THESIS - IMAGEN A LA IZQUIERDA EN DESKTOP */
+/* CONTENEDOR DE THESIS - EXACTAMENTE COMO TU ORIGINAL */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    display: flex;              
+    justify-content: space-between;  /* COMO TU ORIGINAL */
+    align-items: center;
     padding: 0;
     margin-top: 0;
-    gap: 120px;
 }
 
-/* IMAGEN A LA IZQUIERDA - TEXTO A LA DERECHA */
+/* TEXTO A LA IZQUIERDA - COMO TU ORIGINAL */
+.texto {
+    flex: 2;                    /* COMO TU ORIGINAL */
+    padding-right: 0; 
+    padding-left: 40;           /* COMO TU ORIGINAL */
+    padding-top: 0;
+    color: rgb(24, 23, 26);     /* COMO TU ORIGINAL */
+}
+
+/* IMAGEN A LA DERECHA - COMO TU ORIGINAL */
 .imagen {
     flex: 0 0 auto;
     display: flex;
     justify-content: center;
-    order: 1; /* IMAGEN PRIMERO (IZQUIERDA) */
 }
 
 .imagen img {
@@ -251,13 +257,6 @@ p. ul con-viñetas {
     padding-bottom: 0;
     padding-top: 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
-}
-
-.texto {
-    flex: 0 1 auto;
-    color: rgb(104, 96, 150);
-    text-align: left;
-    order: 2; /* TEXTO DESPUÉS (DERECHA) */
 }
 
 .blue {
@@ -377,21 +376,22 @@ p. ul con-números {
 /* THESIS RESPONSIVO - SOLO CUANDO SE ACHICA */
 @media (max-width: 960px) {
     .container {
-        flex-direction: column;
+        flex-direction: column;  /* CAMBIA A VERTICAL */
         gap: 35px;
         align-items: center;
     }
     
     .imagen {
-        order: 1; /* IMAGEN ARRIBA */
+        order: 1;  /* IMAGEN ARRIBA */
         width: 100%;
         display: flex;
         justify-content: center;
     }
     
     .texto {
-        order: 2; /* TEXTO ABAJO */
+        order: 2;  /* TEXTO ABAJO */
         width: 100%;
+        padding-left: 0;  /* QUITA EL PADDING EN MÓVIL */
     }
     
     .imagen img {
