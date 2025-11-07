@@ -21,8 +21,6 @@ body {
     background-position: center; 
     background-attachment: fixed;
     font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
 }
 
 /* NAVBAR MEJORADA - DOS FILAS EQUILIBRADAS */
@@ -82,10 +80,8 @@ body {
 
 /* CONTENIDO PRINCIPAL */
 .contenido {
-    margin: 100px auto 50px;
-    max-width: 1400px;
-    padding: 0 20px;
-    flex: 1; /* Ocupa el espacio disponible */
+    margin: 100px 220px 50px 220px;
+    padding: 0;
 }
 
 .principal-title {
@@ -312,43 +308,61 @@ ol {
     height: auto;
 }
 
-/* BLOQUE GRIS ORIGINAL COMPACTO - USEFUL LINKS */
+/* BLOQUE GRIS EXACTAMENTE COMO EN TU VERSIÓN INICIAL */
 .gray-block {
-    background-color: rgba(240, 240, 245, 0.8);
-    margin: 40px 220px 20px 220px; /* Márgenes laterales grandes, margen superior reducido */
-    padding: 15px 20px;
-    border-radius: 5px;
+    background-color: rgba(95, 93, 105, 0.82); 
+    width: 100%;  
+    box-sizing: border-box; 
+    height: 185px;
+    margin-top: 40px;
 }
 
+.gray-block h2 {
+    color: whitesmoke;
+    font-family: sans-serif;
+    margin-left: 220px;
+    margin-right: 220px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+        
 .columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+    margin-left: 220px;
+    margin-right: 220px;
+    margin-top: 5px;
+    margin-bottom: 50px;
 }
-
+        
 .columns div {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 5px;
+    display: flex; 
+    align-items: center;
+    color: ghostwhite;
+    list-style-type: square;
+    font-family: sans-serif;
+    font-size: 18px;
 }
 
-.columns li {
-    list-style-type: none;
-    margin-bottom: 5px;
-    font-size: 14px;
+.columns div li {
+    padding-left: 10px;
 }
 
-.columns a {
-    color: rgb(80, 71, 132);
-    text-decoration: none;
-    transition: color 0.3s;
-    font-size: 14px;
+.columns div li a {
+    margin-bottom: 1.8px;
+    line-height: 1.8;
+    padding-left: 0;
+    color: ghostwhite; 
+    white-space: pre-wrap;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .columns a:hover {
-    color: rgba(11, 4, 108, 0.86);
-    text-decoration: underline;
+    text-decoration: underline; 
+    color: #230072; 
 }
 
 /* CLASES ADICIONALES PARA COMPATIBILIDAD */
@@ -406,17 +420,20 @@ ul.color p {
     
     /* BLOQUE GRIS - MÁRGENES RESPONSIVOS */
     .gray-block {
-        margin: 40px 20px 20px 20px;
-        padding: 12px 15px;
+        height: auto;
+        min-height: 185px;
+    }
+    
+    .gray-block h2 {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 15px;
     }
     
     .columns {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .columns div {
-        min-width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 30px;
     }
     
     /* SECCIONES IMAGEN+TEXTO */
@@ -461,9 +478,14 @@ ul.color p {
         margin-top: 110px;
     }
     
-    .gray-block {
-        margin: 40px 15px 20px 15px;
-        padding: 10px 12px;
+    .gray-block h2 {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .columns {
+        margin-left: 15px;
+        margin-right: 15px;
     }
 }
 
@@ -490,9 +512,15 @@ ul.color p {
         margin-top: 100px;
     }
     
+    /* BLOQUE GRIS - UNA COLUMNA EN MÓVILES */
+    .columns {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
     .gray-block {
-        margin: 40px 10px 20px 10px;
-        padding: 8px 10px;
+        height: auto;
+        min-height: 200px;
     }
 }
 
@@ -512,9 +540,19 @@ ul.color p {
         max-height: 300px;
     }
     
-    .gray-block {
-        margin: 40px 8px 20px 8px;
-        padding: 6px 8px;
+    .gray-block h2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.3rem;
+    }
+    
+    .columns {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .columns div {
+        font-size: 16px;
     }
 }
 
@@ -527,5 +565,9 @@ ul.color p {
     .navbar a {
         font-size: 10px;
         padding: 5px 1px;
+    }
+    
+    .columns div {
+        font-size: 14px;
     }
 }
