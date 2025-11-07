@@ -531,20 +531,3 @@ ul.color p {
         display: none;
     }
 }
-🎯 Cambios Principales en el Bloque Gris:
-
-Bloque Gris Original Restaurado:
-
-css
-.gray-block {
-    background-color: rgba(240, 240, 245, 0.8);
-    margin: 40px 0;
-    /* Sin padding extra - tamaño original */
-}
-
-.columns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-around;
-}
