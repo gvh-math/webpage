@@ -48,7 +48,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    flex-wrap: nowrap; /* IMPORTANTE: evita que se rompa en varias líneas */
+    flex-wrap: nowrap;
     gap: 0;
 }
 
@@ -308,18 +308,18 @@ ol {
     height: auto;
 }
 
-/* BLOQUE GRIS - USEFUL LINKS */
+/* BLOQUE GRIS ORIGINAL - USEFUL LINKS */
 .gray-block {
     background-color: rgba(240, 240, 245, 0.8);
-    padding: 30px 20px;
     margin: 40px 0;
-    border-radius: 8px;
+    /* Sin padding extra, tamaño original */
 }
 
 .columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
 }
 
 .columns div {
@@ -412,8 +412,10 @@ ul.color p {
         max-width: 350px;
     }
     
+    /* BLOQUE GRIS - MANTIENE FORMATO ORIGINAL */
     .columns {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
@@ -496,7 +498,7 @@ ul.color p {
 
 /* MEDIA QUERY PARA MÓVILES MUY PEQUEÑOS (360px) */
 @media (max-width: 360px) {
-    /* NAVBAR - TEXTS MÁS COMPACTOS */
+    /* NAVBAR - TEXTOS MÁS COMPACTOS */
     .navbar {
         height: 45px;
     }
@@ -528,4 +530,21 @@ ul.color p {
     .navbar a[href="communications.html"] b {
         display: none;
     }
+}
+🎯 Cambios Principales en el Bloque Gris:
+
+Bloque Gris Original Restaurado:
+
+css
+.gray-block {
+    background-color: rgba(240, 240, 245, 0.8);
+    margin: 40px 0;
+    /* Sin padding extra - tamaño original */
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
 }
