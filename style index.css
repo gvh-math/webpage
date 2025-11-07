@@ -167,34 +167,6 @@ ul.con-viñetas li {
     color: #1a1a33;
 }
 
-ul.color {
-    list-style-type: square;  
-    margin-bottom: 18px;
-    line-height: 1.6;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    text-align: justify;
-    padding-left: 25px;
-}
-
-ul.color li strong {
-    margin-bottom: 1.8px;
-    line-height: 1.8;
-    padding-top: 20px;
-    color: rgb(104, 96, 150);
-}
-
-ul.color i {
-    color: rgb(104, 96, 150);
-}
-
-ol {
-    list-style-type: decimal;
-    margin-bottom: 15px;
-    line-height: 1.8; 
-    color: rgb(104, 96, 150);
-    padding-left: 25px;
-}
-
 /* CLASES ESPECIALES */
 .highlight {
     font-weight: bold;
@@ -204,18 +176,6 @@ ol {
 .email {
     color: rgb(104, 96, 150);
     font-weight: bold;
-}
-
-.blue {
-    line-height: 1.6;
-    color: rgb(104, 96, 150);
-    padding-left: 20px;  
-    text-align: justify;
-}
-
-.lista-inversa {
-    color: #2b2b2b;
-    text-align: justify;
 }
 
 /* SECCIÓN PRINCIPAL COMENZO - IMAGEN flores.jpg + TEXTO */
@@ -283,38 +243,12 @@ ol {
     text-align: left;
 }
 
-/* GRID DE IMÁGENES RESPONSIVO */
-.image-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.image-container img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Imagen sola centrada */
-.img9 {
-    grid-column: 1 / -1;
-    justify-self: center;
-    max-width: 400px;
-    height: auto;
-}
-
-/* BLOQUE GRIS EXACTAMENTE COMO EN TU VERSIÓN INICIAL */
+/* BLOQUE GRIS EXACTAMENTE COMO TU VERSIÓN ORIGINAL */
 .gray-block {
     background-color: rgba(95, 93, 105, 0.82); 
     width: 100%;  
     box-sizing: border-box; 
     height: 185px;
-    margin-top: 40px;
 }
 
 .gray-block h2 {
@@ -324,7 +258,7 @@ ol {
     margin-right: 220px;
     padding-top: 20px;
     padding-bottom: 5px;
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: 30px;
 }
         
 .columns {
@@ -336,7 +270,7 @@ ol {
     margin-top: 5px;
     margin-bottom: 50px;
 }
-        
+
 .columns div {
     display: flex; 
     align-items: center;
@@ -351,7 +285,7 @@ ol {
 }
 
 .columns div li a {
-    margin-bottom: 1.8px;
+    margin-bottom: 18px;
     line-height: 1.8;
     padding-left: 0;
     color: ghostwhite; 
@@ -368,20 +302,6 @@ ol {
 /* CLASES ADICIONALES PARA COMPATIBILIDAD */
 ul.no-viñetas {
     list-style-type: none;
-}
-
-ul.con-números { 
-    padding-left: 25px;
-    margin-top: 20px;
-}
-
-/* Corrección para selectores con espacios */
-ul.color p {
-    margin-bottom: 1.8px;
-    font-size: 16px;
-    line-height: 1.8;
-    padding-left: 25px;
-    padding-top: 5px;
 }
 
 /* MEDIA QUERY PARA CUANDO SE ACHICA LA VENTANA - DOS FILAS PERFECTAS */
@@ -419,21 +339,14 @@ ul.color p {
     }
     
     /* BLOQUE GRIS - MÁRGENES RESPONSIVOS */
-    .gray-block {
-        height: auto;
-        min-height: 185px;
-    }
-    
     .gray-block h2 {
         margin-left: 20px;
         margin-right: 20px;
-        padding-top: 15px;
     }
     
     .columns {
         margin-left: 20px;
         margin-right: 20px;
-        margin-bottom: 30px;
     }
     
     /* SECCIONES IMAGEN+TEXTO */
@@ -543,7 +456,7 @@ ul.color p {
     .gray-block h2 {
         margin-left: 10px;
         margin-right: 10px;
-        font-size: 1.3rem;
+        font-size: 24px;
     }
     
     .columns {
