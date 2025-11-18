@@ -154,7 +154,7 @@ a:hover {
 
 /* LISTAS */
 ul.con-viñetas {
-    list-style-type: square;  
+    list-style-type: circle;  
     margin-bottom: 18px;
     line-height: 1.6;
     font-size: clamp(0.9rem, 2vw, 1rem);
