@@ -218,7 +218,7 @@ ul.no-viñetas {
 .container1 {
     display: flex;
     align-items: flex-start;
-    gap: 90px;
+    gap: 100px;
     margin-bottom: 40px;
 }
 
