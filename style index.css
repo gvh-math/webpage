@@ -176,6 +176,7 @@ ul.con-viñetas li {
 .email {
     color: rgb(104, 96, 150);
     font-weight: bold;
+    text-align: center;
 }
 
 /* SECCIÓN PRINCIPAL COMENZO - IMAGEN flores.jpg + TEXTO */
@@ -253,7 +254,7 @@ ul.con-viñetas li {
 }
 
 .imagen2 img {     
-    max-width: 230px;
+    max-width: 280px;
     width: 100%;
     height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
