@@ -154,7 +154,7 @@ a:hover {
 
 /* LISTAS */
 ul.con-viñetas {
-    list-style-type: circle; 
+    list-style-type: disc; 
     margin-bottom: 18px;
     line-height: 1.6;
     font-size: clamp(0.9rem, 2vw, 1rem);
@@ -217,7 +217,7 @@ ul.no-viñetas {
 .container1 {
     display: flex;
     align-items: flex-start;
-    gap: 140px;
+    gap: 100px;
     margin-bottom: 40px;
 }
 
@@ -293,7 +293,7 @@ ul.no-viñetas {
     display: flex; 
     align-items: center;
     color: ghostwhite;
-    list-style-type: circle;
+    list-style-type: disc;
     font-family: sans-serif;
     font-size: 18px;
 }
