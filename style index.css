@@ -221,8 +221,8 @@ ul.con-viñetas li {
 .container1 {
     display: flex;
     align-items: flex-start;
-    gap: 30px;
-    margin-bottom: 40px;
+    gap: 40px; /* Aumentado de 30px a 40px */
+    margin-bottom: 50px; /* Aumentado de 40px a 50px */
 }
 
 .imagen1 {
@@ -238,16 +238,15 @@ ul.con-viñetas li {
 }
 
 .texto1 {
-    grid-column: 2;
+    flex: 1;
 }
-
 
 /* CONTENEDOR NEWS - IMAGEN galardon1.png + TEXTO */
 .container2 {
     display: flex;
     align-items: flex-start;
-    gap: 30px;
-    margin-bottom: 40px;
+    gap: 40px; /* Aumentado de 30px a 40px */
+    margin-bottom: 50px; /* Aumentado de 40px a 50px */
 }
 
 .imagen2 {
@@ -255,7 +254,7 @@ ul.con-viñetas li {
 }
 
 .imagen2 img {     
-    max-width: 280px; /* AUMENTADO de 230px a 280px */
+    max-width: 280px; /* Imagen más grande */
     width: 100%;
     height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -271,11 +270,15 @@ ul.con-viñetas li {
 @media (max-width: 768px) {
     .container1, .container2 {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
     
     .imagen1, .imagen2 {
         align-self: center;
+    }
+    
+    .imagen2 img {
+        max-width: 250px; /* Un poco más pequeño en móviles */
     }
 }
 
