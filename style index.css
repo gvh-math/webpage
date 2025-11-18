@@ -219,12 +219,14 @@ ul.con-viñetas li {
 
 /* CONTENEDOR NEWS - IMAGEN ANID1.png + TEXTO */
 .container1 {
-    display: contents;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .imagen1 {
-    grid-column: 1;
-    justify-self: start;
+    flex: 0 0 auto;
 }
 
 .imagen1 img {     
@@ -242,16 +244,18 @@ ul.con-viñetas li {
 
 /* CONTENEDOR NEWS - IMAGEN galardon1.png + TEXTO */
 .container2 {
-display: contents;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .imagen2 {
-    grid-column: 1;
-    justify-self: start;
+    flex: 0 0 auto;
 }
 
 .imagen2 img {     
-    max-width: 280px;
+    max-width: 280px; /* AUMENTADO de 230px a 280px */
     width: 100%;
     height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -259,7 +263,7 @@ display: contents;
 }
 
 .texto2 {
-    grid-column: 2;
+    flex: 1;
 }
 
 
