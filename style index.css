@@ -238,35 +238,27 @@ ul.con-viñetas li {
 /* CONTENEDOR NEWS - IMAGEN galardon1.png + TEXTO */
 .container2 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: flex-start;
-    gap: 80px;
-    margin: 30px 0;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .imagen2 {
     flex: 0 0 auto;
-    display: flex;
-    justify-content: center;
-    order: 1;
 }
 
-.imagen2 img {
-    max-width: 330px;
+.imagen2 img {     
+    max-width: 230px;
     width: 100%;
     height: auto;
-    max-height: 440px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
 
 .texto2 {
-    flex: 1 1 500px;
-    min-width: 300px;
-    order: 2;
-    color: rgb(104, 96, 150);
-    text-align: left;
+    flex: 1;
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
 /* BLOQUE GRIS EXACTAMENTE COMO TU VERSIÓN ORIGINAL */
