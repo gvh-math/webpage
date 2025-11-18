@@ -164,7 +164,7 @@ a {
 }
 
  ul.con-viñetas {
-    list-style-type: circle; 
+    list-style-type: disc; 
     margin-bottom: 18;
     line-height: 1.6;
     font-family: sans-serif;
@@ -174,7 +174,7 @@ a {
 }
 
 ul.color {
-    list-style-type: circle; 
+    list-style-type: disc; 
     margin-bottom: 18;
     line-height: 1.6;
     font-family: sans-serif;
