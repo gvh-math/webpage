@@ -231,8 +231,13 @@ ul.con-viñetas li {
 
 .texto1 {
     flex: 1;
+}
+
+.texto1 p {
     margin-bottom: 15px;
     text-align: justify;
+    color: #1a1a33;
+    line-height: 1.6;
 }
 
 /* CONTENEDOR NEWS - IMAGEN galardon1.png + TEXTO */
@@ -257,8 +262,25 @@ ul.con-viñetas li {
 
 .texto2 {
     flex: 1;
+}
+
+.texto2 p {
     margin-bottom: 15px;
     text-align: justify;
+    color: #1a1a33;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container1, .container2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .imagen1, .imagen2 {
+        align-self: center;
+    }
 }
 
 /* BLOQUE GRIS EXACTAMENTE COMO TU VERSIÓN ORIGINAL */
