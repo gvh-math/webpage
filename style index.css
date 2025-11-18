@@ -178,8 +178,9 @@ ul.no-viñetas {
 }
 
 .email {
-    color: rgb(104, 96, 150);
+    color: rgba(11, 4, 108, 0.86);
     font-weight: bold;
+    text-align: center;
 }
 
 /* SECCIÓN PRINCIPAL COMENZO - IMAGEN flores.jpg + TEXTO */
