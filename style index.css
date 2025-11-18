@@ -23,7 +23,7 @@ body {
     font-family: sans-serif;
 }
 
-/* NAVBAR MEJORADA - DOS FILAS EQUILIBRADAS */
+/* NAVBAR */
 .navbar {
     position: fixed;
     background-color: rgba(11, 4, 108, 0.92); 
@@ -90,7 +90,7 @@ body {
     padding: 0 20px;
 }
 
-/* TÍTULOS MEJORADOS */
+/* TÍTULOS */
 h1 {
     padding-top: 40px;
     text-align: center;
@@ -167,6 +167,10 @@ ul.con-viñetas li {
     color: #1a1a33;
 }
 
+ul.no-viñetas {
+    list-style-type: none;
+}
+
 /* CLASES ESPECIALES */
 .highlight {
     font-weight: bold;
@@ -176,7 +180,6 @@ ul.con-viñetas li {
 .email {
     color: rgb(104, 96, 150);
     font-weight: bold;
-    text-align: center;
 }
 
 /* SECCIÓN PRINCIPAL COMENZO - IMAGEN flores.jpg + TEXTO */
@@ -210,19 +213,12 @@ ul.con-viñetas li {
     order: 2;
 }
 
-/* CONTENEDOR PRINCIPAL PARA ALINEACIÓN */
-.news-container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 30px;
-    align-items: start;
-
 /* CONTENEDOR NEWS - IMAGEN ANID1.png + TEXTO */
 .container1 {
     display: flex;
     align-items: flex-start;
-    gap: 40px; /* Aumentado de 30px a 40px */
-    margin-bottom: 50px; /* Aumentado de 40px a 50px */
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
 .imagen1 {
@@ -245,8 +241,8 @@ ul.con-viñetas li {
 .container2 {
     display: flex;
     align-items: flex-start;
-    gap: 40px; /* Aumentado de 30px a 40px */
-    margin-bottom: 50px; /* Aumentado de 40px a 50px */
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
 .imagen2 {
@@ -254,7 +250,7 @@ ul.con-viñetas li {
 }
 
 .imagen2 img {     
-    max-width: 280px; /* Imagen más grande */
+    max-width: 280px;
     width: 100%;
     height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -265,24 +261,7 @@ ul.con-viñetas li {
     flex: 1;
 }
 
-
-/* Responsive */
-@media (max-width: 768px) {
-    .container1, .container2 {
-        flex-direction: column;
-        gap: 25px;
-    }
-    
-    .imagen1, .imagen2 {
-        align-self: center;
-    }
-    
-    .imagen2 img {
-        max-width: 250px; /* Un poco más pequeño en móviles */
-    }
-}
-
-/* BLOQUE GRIS EXACTAMENTE COMO TU VERSIÓN ORIGINAL */
+/* BLOQUE GRIS */
 .gray-block {
     background-color: rgba(95, 93, 105, 0.82); 
     width: 100%;  
@@ -338,14 +317,8 @@ ul.con-viñetas li {
     color: #230072; 
 }
 
-/* CLASES ADICIONALES PARA COMPATIBILIDAD */
-ul.no-viñetas {
-    list-style-type: none;
-}
-
-/* MEDIA QUERY PARA CUANDO SE ACHICA LA VENTANA - DOS FILAS PERFECTAS */
+/* MEDIA QUERIES SOLO PARA MÓVILES - MÁS ESPECÍFICAS */
 @media (max-width: 960px) {
-    /* NAVBAR - DOS FILAS EQUILIBRADAS (3 + 3) */
     .navbar {
         min-height: 120px;
         padding: 5px 0;
@@ -353,31 +326,25 @@ ul.no-viñetas {
     
     .navbar ul {
         flex-wrap: wrap;
-        gap: 0;
     }
     
     .navbar li {
         flex: 0 0 33.333%;
-        min-width: 0;
     }
     
     .navbar a {
         font-size: 14px;
         padding: 12px 4px;
-        margin: 2px;
     }
     
-    /* CONTENIDO PRINCIPAL */
     .contenido {
         margin: 120px 20px 40px;
-        padding: 0 15px;
     }
     
     .principal-title {
         margin-top: 120px;
     }
     
-    /* BLOQUE GRIS - MÁRGENES RESPONSIVOS */
     .gray-block h2 {
         margin-left: 20px;
         margin-right: 20px;
@@ -387,139 +354,47 @@ ul.no-viñetas {
         margin-left: 20px;
         margin-right: 20px;
     }
+}
+
+/* SOLO PARA MÓVILES - LAS IMÁGENES SE APILAN VERTICALMENTE */
+@media (max-width: 768px) {
+    .container1,
+    .container2 {
+        flex-direction: column;
+        gap: 20px;
+    }
     
-    /* SECCIONES IMAGEN+TEXTO */
-    .comienzo, .container {
+    .comienzo {
         flex-direction: column;
         gap: 35px;
-        align-items: center;
     }
     
-    .photo, .imagen {
-        order: 1;
-        width: 100%;
+    .photo,
+    .imagen1,
+    .imagen2 {
+        align-self: center;
     }
     
-    .paragraph, .texto {
-        order: 2;
-        width: 100%;
-    }
-    
-    .photo img, .imagen img {
+    .photo img {
         max-width: 300px;
-        max-height: 380px;
+    }
+    
+    .imagen1 img {
+        max-width: 230px;
+    }
+    
+    .imagen2 img {
+        max-width: 250px;
     }
 }
 
-/* Para tablets más pequeñas (768px) */
-@media (max-width: 768px) {
-    .navbar {
-        min-height: 110px;
-    }
-    
-    .navbar a {
-        font-size: 13px;
-        padding: 10px 3px;
-    }
-    
-    .contenido {
-        margin-top: 110px;
-    }
-    
-    .principal-title {
-        margin-top: 110px;
-    }
-    
-    .gray-block h2 {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-    
-    .columns {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-}
-
-/* Para móviles (600px) */
 @media (max-width: 600px) {
-    .navbar {
-        min-height: 100px;
-    }
-    
-    .navbar li {
-        flex: 0 0 33.333%;
-    }
-    
-    .navbar a {
-        font-size: 12px;
-        padding: 8px 2px;
-    }
-    
-    .contenido {
-        margin-top: 100px;
-    }
-    
-    .principal-title {
-        margin-top: 100px;
-    }
-    
-    /* BLOQUE GRIS - UNA COLUMNA EN MÓVILES */
     .columns {
         grid-template-columns: 1fr;
-        gap: 15px;
     }
     
     .gray-block {
         height: auto;
         min-height: 200px;
-    }
-}
-
-/* Para móviles pequeños (480px) */
-@media (max-width: 480px) {
-    .navbar {
-        min-height: 90px;
-    }
-    
-    .navbar a {
-        font-size: 11px;
-        padding: 6px 1px;
-    }
-    
-    .photo img, .imagen img {
-        max-width: 250px;
-        max-height: 300px;
-    }
-    
-    .gray-block h2 {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 24px;
-    }
-    
-    .columns {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    
-    .columns div {
-        font-size: 16px;
-    }
-}
-
-/* Para móviles muy pequeños (360px) */
-@media (max-width: 360px) {
-    .navbar {
-        min-height: 80px;
-    }
-    
-    .navbar a {
-        font-size: 10px;
-        padding: 5px 1px;
-    }
-    
-    .columns div {
-        font-size: 14px;
     }
 }
