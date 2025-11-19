@@ -234,7 +234,7 @@ p. ul con-viñetas {
     align-items: flex-start;
     padding: 0;
     margin-top: 0;
-    gap: 30px; /* Espacio balanceado */
+    gap: 40px; /* Espacio balanceado */
     width: 100%;
     max-width: 1000px; /* Ancho máximo para evitar desbordamiento */
     margin-left: auto;
@@ -245,8 +245,8 @@ p. ul con-viñetas {
 /* TEXTO A LA IZQUIERDA */
 .texto {
     flex: 1;
-    padding-left: 30px;
-    padding-right: 0; /* Reducido */
+    padding-left: 10px;
+    padding-right: 10; /* Reducido */
     box-sizing: border-box;
 }
 
@@ -261,8 +261,8 @@ p. ul con-viñetas {
 }
 
 .imagen img {
-    max-width: 330px;
-    max-height: 440px;
+    max-width: 340px;
+    max-height: 460px;
     width: 100%; /* Se adapta al contenedor */
     height: auto; /* Mantiene proporciones */
     padding-bottom: 0;
