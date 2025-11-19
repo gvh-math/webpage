@@ -245,7 +245,7 @@ p. ul con-viñetas {
 /* TEXTO A LA IZQUIERDA */
 .texto {
     flex: 1;
-    padding-left: 10px;
+    padding-left: 0px;
     padding-right: 10px; /* Reducido */
     box-sizing: border-box;
 }
@@ -281,7 +281,7 @@ p. ul con-viñetas {
 
 .clairblue {
     font-family: sans-serif;
-    line-height: 1.6;
+    line-height: 1.2;
     color: rgb(104, 96, 150);
     padding-left: 20px;  
     text-align: justify;
@@ -298,9 +298,9 @@ p. ul con-números {
 }
 
 .lista-inversa {
-  color: rgb(24, 23, 26);
-  text-align: justify;
-  padding-left: 30;
+   color: rgb(24, 23, 26);
+   text-align: justify;
+   padding-left: 30;
 }
 
 /* MANTENIENDO TU GRID DE IMÁGENES ORIGINAL SIN CAMBIOS */
