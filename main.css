@@ -171,6 +171,9 @@ a {
     font-size: 16;
     text-align: justify;
     padding-left: 25;
+}
+
+ul.con-viñetas li {
     color: rgba(11, 4, 108, 0.86);
 }
 
