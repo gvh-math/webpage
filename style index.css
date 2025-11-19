@@ -164,7 +164,7 @@ ul.con-viñetas {
 
 ul.con-viñetas li {
     margin-bottom: 15px;
-    color: #1a1a33;
+    color: rgba(11, 4, 108, 0.86);
 }
 
 ul.no-viñetas {
@@ -227,7 +227,7 @@ ul.no-viñetas {
 }
 
 .imagen1 img {     
-    max-width: 260px;
+    max-width: 280px;
     width: 100%;
     height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -251,7 +251,7 @@ ul.no-viñetas {
 }
 
 .imagen2 img {     
-    max-width: 320px;
+    max-width: 340px;
     width: 100%;
     height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
