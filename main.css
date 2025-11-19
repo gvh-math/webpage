@@ -280,6 +280,7 @@ p. ul con-números {
 .lista-inversa {
   color: #2b2b2b;
   text-align: justify;
+  padding-left: 25;
 }
 
 /* MANTENIENDO TU GRID DE IMÁGENES ORIGINAL SIN CAMBIOS */
