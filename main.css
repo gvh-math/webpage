@@ -227,24 +227,28 @@ p. ul con-viñetas {
 }
 
 /* CONTENEDOR DE THESIS */
-/* CONTENEDOR DE THESIS */
 .containert {
     display: flex;
-    flex-wrap: nowrap; /* AÑADIR ESTA LÍNEA */
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
     margin-top: 0;
-    gap: 10px;
+    gap: 30px; /* Espacio balanceado */
     width: 100%;
+    max-width: 1200px; /* Ancho máximo para evitar desbordamiento */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 /* TEXTO A LA IZQUIERDA */
 .texto {
     flex: 1;
     padding-left: 20px;
-    padding-right: 10px;
-    color: rgb(24, 23, 26);     
+    padding-right: 0; /* Reducido */
+    color: rgb(24, 23, 26);
+    box-sizing: border-box;
 }
 
 /* IMAGEN A LA DERECHA */
@@ -254,14 +258,18 @@ p. ul con-viñetas {
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    box-sizing: border-box;
 }
 
 .imagen img {
-    max-width: 260px; /* REDUCIR de 330px a 200px */
-    max-height: 320px;
+    max-width: 330px;
+    max-height: 440px;
+    width: 100%; /* Se adapta al contenedor */
+    height: auto; /* Mantiene proporciones */
     padding-bottom: 0;
     padding-top: 0;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 /*fin de containert*/
 
