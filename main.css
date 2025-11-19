@@ -226,30 +226,31 @@ p. ul con-viñetas {
     color: rgb(104, 96, 150);
 }
     
-/* CONTENEDOR DE THESIS - EXACTAMENTE COMO TU ORIGINAL */
+/* CONTENEDOR DE THESIS - CORREGIDO */
 .containert {
     display: flex;              
-    justify-content: center;  /* COMO TU ORIGINAL */
-    align-items: flex-start;
+    justify-content: center;  
+    align-items: center; /* Cambiado de flex-start a center para mejor alineación vertical */
     padding: 0;
     margin-top: 0;
-    gap: 90; /* Espacio controlado entre elementos */
+    gap: 70px; /* Agregado 'px' para las unidades */
 }
 
-/* TEXTO A LA IZQUIERDA - COMO TU ORIGINAL */
+/* TEXTO A LA IZQUIERDA */
 .texto {
-    flex: 2;                    /* COMO TU ORIGINAL */
+    flex: 2;                    
     padding-right: 0; 
-    padding-left: 30;           /* COMO TU ORIGINAL */
+    padding-left: 20px; /* Agregado 'px' */ 
     padding-top: 0;
-    color: rgb(24, 23, 26);     /* COMO TU ORIGINAL */
+    color: rgb(24, 23, 26);     
 }
 
-/* IMAGEN A LA DERECHA - COMO TU ORIGINAL */
+/* IMAGEN A LA DERECHA */
 .imagen {
     flex: 0 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center; /* Para centrar verticalmente la imagen */
 }
 
 .imagen img {
