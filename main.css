@@ -236,7 +236,7 @@ p. ul con-viñetas {
     margin-top: 0;
     gap: 40px; /* Espacio balanceado */
     width: 100%;
-    max-width: 900px; /* Ancho máximo para evitar desbordamiento */
+    max-width: 1000px; /* Ancho máximo para evitar desbordamiento */
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
