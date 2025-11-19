@@ -234,7 +234,7 @@ p. ul con-viñetas {
     align-items: flex-start;
     padding: 0;
     margin-top: 0;
-    gap: 15px; /* Espacio balanceado */
+    gap: 20px; /* Espacio balanceado */
     width: 100%;
     max-width: 1000px; /* Ancho máximo para evitar desbordamiento */
     margin-left: auto;
@@ -271,16 +271,23 @@ p. ul con-viñetas {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
 }
-/*fin de containert*/
-
 
 .blue {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: rgba(11, 4, 108, 0.86);
+    padding-left: 20;  
+    text-align: justify;
+}
+
+.clairblue {
     font-family: sans-serif;
     line-height: 1.6;
     color: rgb(104, 96, 150);
     padding-left: 20;  
     text-align: justify;
 }
+/*FIN DE CONTAINERT*/
 
 ul.con-números { 
     padding-left: 25;
