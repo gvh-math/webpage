@@ -233,7 +233,7 @@ p. ul con-viñetas {
     align-items: flex-start;
     padding: 0;
     margin-top: 0;
-    gap: 120px; /* Espacio controlado entre elementos */
+    gap: 90px; /* Espacio controlado entre elementos */
 }
 
 /* TEXTO A LA IZQUIERDA - COMO TU ORIGINAL */
