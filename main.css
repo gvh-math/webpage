@@ -225,34 +225,41 @@ p. ul con-viñetas {
     font-weight: bold;
     color: rgb(104, 96, 150);
 }
-    
+
 /* CONTENEDOR DE THESIS */
 .containert {
     display: flex;
-    justify-content: space-between; /* Esto coloca uno a cada extremo */
+    justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: nowrap; /* ¡IMPORTANTE! Evita que salte a nueva línea */
     padding: 0;
     margin-top: 0;
+    gap: 20px;
     width: 100%;
+    overflow: hidden; /* Previene desbordamientos */
 }
 
 /* TEXTO A LA IZQUIERDA */
 .texto {
     flex: 1;
     padding-left: 20px;
+    padding-right: 20px;
     color: rgb(24, 23, 26);
+    min-width: 0; /* Permite que se ajuste al espacio disponible */
 }
 
 /* IMAGEN A LA DERECHA */
 .imagen {
-    flex-shrink: 0; /* No se reduce de tamaño */
-    margin-left: 20px; /* Espacio entre texto e imagen */
-    padding-right: 20px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .imagen img {
-    max-width: 330px;       
-    max-height: 440px;  
+    width: 200px; /* Usar width fijo en lugar de max-width */
+    height: auto; /* Mantiene proporciones */
     padding-bottom: 0;
     padding-top: 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
