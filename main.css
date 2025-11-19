@@ -240,7 +240,7 @@ p. ul con-viñetas {
 .texto {
     flex: 2;                    /* COMO TU ORIGINAL */
     padding-right: 0; 
-    padding-left: 3sq0;           /* COMO TU ORIGINAL */
+    padding-left: 30;           /* COMO TU ORIGINAL */
     padding-top: 0;
     color: rgb(24, 23, 26);     /* COMO TU ORIGINAL */
 }
