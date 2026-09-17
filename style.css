@@ -1,0 +1,570 @@
+/* ==========================================================================
+   STYLE.CSS — Hoja de estilos unificada para todas las páginas del sitio
+   Reemplaza a "style index.css" y "main.css"
+   ========================================================================== */
+
+/* ---- Variables de color y medidas compartidas ---- */
+:root {
+    --color-dark-blue: rgba(11, 4, 108, 0.86);
+    --color-navbar-bg: rgba(11, 4, 108, 0.92);
+    --color-navbar-hover: rgba(99, 92, 180, 0.86);
+    --color-medium-purple: rgb(104, 96, 150);
+    --color-heading-secondary: rgb(80, 71, 132);
+    --color-text: #1a1a33;
+    --color-list-inverse: rgb(24, 23, 26);
+    --shadow-image: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    --content-margin-desktop: 220px;
+    --content-margin-mobile: 20px;
+}
+
+/* ---- Reset ---- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-image: url("fondos-03.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    background-color: var(--color-navbar-bg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav {
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.navbar li {
+    flex: 1;
+    min-width: 0;
+}
+
+.navbar a {
+    cursor: pointer;
+    padding: 15px 8px;
+    display: block;
+    color: rgba(227, 226, 245, 0.97);
+    border-radius: 2px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin: 0 2px;
+}
+
+.navbar ul li a:hover {
+    background-color: var(--color-navbar-hover);
+    transform: translateY(-2px);
+}
+
+/* Página activa en el menú */
+.navbar li.active a {
+    background-color: var(--color-navbar-hover);
+}
+
+/* ==========================================================================
+   CONTENIDO PRINCIPAL / TIPOGRAFÍA
+   ========================================================================== */
+.contenido {
+    margin: 100px var(--content-margin-desktop) 50px;
+}
+
+.principal-title {
+    text-align: center;
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+h1 {
+    padding-top: 40px;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-dark-blue);
+    margin: 30px 0 20px;
+}
+
+h2 {
+    padding-top: 10px;
+    color: var(--color-heading-secondary);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 35px 0 20px;
+}
+
+h3 {
+    color: var(--color-medium-purple);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin: 25px 0 13px;
+}
+
+h4 {
+    color: var(--color-medium-purple);
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    margin: 35px 0 12px;
+}
+
+h5 {
+    color: var(--color-dark-blue);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 30px 0;
+    text-align: center;
+}
+
+h6 {
+    color: var(--color-medium-purple);
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    margin: 30px 0;
+    text-align: center;
+}
+
+p {
+    color: var(--color-text);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin: 15px 0 24px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+a {
+    color: var(--color-medium-purple);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-dark-blue);
+    text-decoration: underline;
+}
+
+.highlight {
+    font-weight: bold;
+    color: var(--color-medium-purple);
+}
+
+.email {
+    color: var(--color-dark-blue);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ==========================================================================
+   LISTAS
+   (Antes: ul.con-viñetas / ul.no-viñetas — renombradas para evitar la "ñ"
+   en selectores CSS. Se mantiene compatibilidad si el HTML aún usa el
+   nombre viejo, pero lo ideal es migrar el HTML a las nuevas clases). 
+   ========================================================================== */
+ul.bulleted-list,
+ul.con-viñetas {
+    list-style-type: disc;
+    margin-bottom: 18px;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    text-align: justify;
+    padding-left: 25px;
+}
+
+ul.bulleted-list li,
+ul.con-viñetas li {
+    margin-bottom: 15px;
+}
+
+ul.unbulleted-list,
+ul.no-viñetas {
+    list-style-type: none;
+}
+
+/* Lista numerada de publicaciones */
+ol.numbered-list,
+ul.con-números {
+    list-style-type: decimal;
+    padding-left: 25px;
+    margin-top: 20px;
+}
+
+ol.numbered-list li,
+ul.con-números li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Lista de charlas en orden cronológico inverso */
+ol.reverse-list,
+.lista-inversa {
+    color: var(--color-list-inverse);
+    text-align: justify;
+    padding-left: 30px;
+}
+
+ol.reverse-list li,
+.lista-inversa li {
+    margin-bottom: 18px;
+}
+
+/* Lista con título en negrita + resumen (usada en "Other investigations") */
+ul.annotated-list,
+ul.color {
+    list-style-type: disc;
+    margin-bottom: 18px;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    text-align: justify;
+    padding-left: 25px;
+}
+
+ul.annotated-list li strong,
+ul.color li strong {
+    color: var(--color-medium-purple);
+}
+
+ul.annotated-list i,
+ul.color i {
+    color: var(--color-medium-purple);
+}
+
+/* ==========================================================================
+   IMÁGENES CON SOMBRA (reutilizable)
+   ========================================================================== */
+.rounded-shadow-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: var(--shadow-image);
+}
+
+/* ==========================================================================
+   SECCIÓN "COMIENZO" (index.html) — foto + texto introductorio
+   ========================================================================== */
+.comienzo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    margin: 40px 0;
+}
+
+.photo {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    order: 1;
+}
+
+.photo img {
+    max-width: 340px;
+}
+
+.paragraph {
+    flex: 1 1 500px;
+    min-width: 300px;
+    order: 2;
+}
+
+/* ==========================================================================
+   NOTICIAS (index.html) — imagen + texto
+   Antes: .container1/.imagen1/.texto1 y .container2/.imagen2/.texto2
+   duplicados casi idénticos. Unificados en .news-item.
+   ========================================================================== */
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.news-image {
+    flex: 0 0 auto;
+}
+
+.news-image img {
+    max-width: 300px;
+}
+
+.news-text {
+    flex: 1;
+}
+
+/* ==========================================================================
+   CONTENEDOR DE TESIS (research.html)
+   Antes: .containert / .texto / .imagen (nombres genéricos que chocaban
+   con otras secciones y con la media query, que apuntaba a ".container"
+   en vez de ".containert" y por eso nunca se activaba en móvil).
+   Renombrado con prefijo "thesis-" para que sea único e inequívoco.
+   ========================================================================== */
+.thesis-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.thesis-text {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.thesis-image {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thesis-image img {
+    max-width: 340px;
+    max-height: 460px;
+}
+
+.blue {
+    line-height: 1.6;
+    color: var(--color-dark-blue);
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.clairblue {
+    line-height: 1.2;
+    color: var(--color-medium-purple);
+    padding-left: 20px;
+    text-align: justify;
+}
+
+/* ==========================================================================
+   GRID DE PÓSTERS (events.html)
+   ========================================================================== */
+.image-container {
+    display: grid;
+    grid-template-areas:
+        "img9 img9"
+        "img7 img8"
+        "img6 img1"
+        "img2 img3"
+        "img4 img5";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: var(--shadow-image);
+}
+
+.image-container .img9 { grid-area: img9; width: 50%; justify-self: center; }
+.image-container .img8 { grid-area: img8; }
+.image-container .img7 { grid-area: img7; }
+.image-container .img6 { grid-area: img6; }
+.image-container .img1 { grid-area: img1; }
+.image-container .img2 { grid-area: img2; }
+.image-container .img3 { grid-area: img3; }
+.image-container .img4 { grid-area: img4; }
+.image-container .img5 { grid-area: img5; }
+
+/* ==========================================================================
+   BLOQUE GRIS "USEFUL LINKS" (index.html)
+   ========================================================================== */
+.gray-block {
+    background-color: rgba(95, 93, 105, 0.82);
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.gray-block h2 {
+    color: whitesmoke;
+    margin-left: var(--content-margin-desktop);
+    margin-right: var(--content-margin-desktop);
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 30px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 5px var(--content-margin-desktop) 0;
+}
+
+.columns ul {
+    list-style-type: disc;
+    color: ghostwhite;
+}
+
+.columns li {
+    padding-left: 10px;
+    margin-bottom: 18px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.columns a {
+    color: ghostwhite;
+}
+
+.columns a:hover {
+    text-decoration: underline;
+    color: #230072;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 960px) {
+    .navbar {
+        min-height: 120px;
+        padding: 5px 0;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+
+    .navbar li {
+        flex: 0 0 33.333%;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 12px 4px;
+    }
+
+    .contenido {
+        margin: 120px var(--content-margin-mobile) 40px;
+    }
+
+    .principal-title {
+        margin-top: 120px;
+    }
+
+    .gray-block h2,
+    .columns {
+        margin-left: var(--content-margin-mobile);
+        margin-right: var(--content-margin-mobile);
+    }
+
+    .thesis-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .thesis-image {
+        order: 1;
+        width: 100%;
+    }
+
+    .thesis-text {
+        order: 2;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .thesis-image img {
+        max-width: 300px;
+        max-height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        min-height: 110px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        padding: 10px 3px;
+    }
+
+    .news-item,
+    .comienzo {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .photo,
+    .news-image {
+        align-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        min-height: 100px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 8px 2px;
+    }
+
+    .columns {
+        grid-template-columns: 1fr;
+    }
+
+    .gray-block {
+        height: auto;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        min-height: 90px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+        padding: 6px 1px;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar {
+        min-height: 80px;
+    }
+
+    .navbar a {
+        font-size: 10px;
+        padding: 5px 1px;
+    }
+}
